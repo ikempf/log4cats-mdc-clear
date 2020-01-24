@@ -1,0 +1,38 @@
+lazy val `log4cats-mdc-clear` = (project in file("."))
+  .settings(
+    organization := "com.ikempf",
+    name := "log4cats-mdc-clear",
+    scalaVersion := "2.13.1",
+    libraryDependencies ++= Seq(
+      "org.typelevel" %% "cats-core" % "2.1.0",
+      "org.typelevel" %% "cats-effect" % "2.0.0",
+      "ch.qos.logback" % "logback-classic" % "1.2.3",
+      "io.chrisdavenport" %% "log4cats-core" % "1.0.1",
+      "io.chrisdavenport" %% "log4cats-slf4j" % "1.0.1",
+    ),
+    scalacOptions ++= List(
+      "-target:jvm-1.8",
+      "-feature",
+      "-encoding",
+      "UTF-8",
+      "-unchecked",
+      "-deprecation",
+      "-language:higherKinds",
+      "-Wdead-code",
+      "-Wvalue-discard",
+      "-Wunused:imports",
+      "-Wunused:patvars",
+      "-Wunused:implicits",
+      "-Wunused:locals",
+      "-Wunused:explicits",
+      "-Wunused:params",
+      "-Wunused:privates",
+      "-Woctal-literal",
+      "-Xlint:adapted-args",
+      "-Xlint:infer-any",
+      "-Xlint:nullary-unit",
+      "-Xlint:nullary-override",
+      "-Xlint:inaccessible",
+      "-Xlint:constant"
+    ),
+  )
